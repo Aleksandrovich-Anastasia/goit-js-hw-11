@@ -18,27 +18,29 @@ export function createGallery(images) {
         comments,
         downloads,
       }) => `
-      <a class="gallery-item" href="${largeImageURL}">
-  <img src="${webformatURL}" alt="${tags}" loading="lazy" />
-  <div class="info">
-    <div class="info-item">
-      <span class="label">Likes</span>
-      <span class="value">${likes}</span>
-    </div>
-    <div class="info-item">
-      <span class="label">Views</span>
-      <span class="value">${views}</span>
-    </div>
-    <div class="info-item">
-      <span class="label">Comments</span>
-      <span class="value">${comments}</span>
-    </div>
-    <div class="info-item">
-      <span class="label">Downloads</span>
-      <span class="value">${downloads}</span>
-    </div>
-  </div>
-</a>
+      <li class="gallery-item">
+        <a href="${largeImageURL}">
+          <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+          <div class="info">
+            <div class="info-item">
+              <span class="label">Likes</span>
+              <span class="value">${likes}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Views</span>
+              <span class="value">${views}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Comments</span>
+              <span class="value">${comments}</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Downloads</span>
+              <span class="value">${downloads}</span>
+            </div>
+          </div>
+        </a>
+      </li>
     `
     )
     .join('');
